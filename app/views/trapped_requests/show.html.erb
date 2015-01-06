@@ -1,2 +1,40 @@
-<h1>TrappedRequest#show</h1>
-<p>Find me in app/views/trapped_request/show.html.erb</p>
+<h1>Trapped request for <%= @trap_id %></h1>
+
+<table>
+  <tr>
+    <th>Trap ID</th>
+    <td><%= @trapped_request.trap_id %></td>
+  </tr>
+
+  <tr>
+    <th>Params</th>
+    <td class='pretty_hash'><%= raw ap @trapped_request.params %></td>
+  </tr>
+
+  <tr>
+    <th>Referrer</th>
+    <td><%= @trapped_request.referrer %></td>
+  </tr>
+
+  <tr>
+    <th>HTTP method</th>
+    <td><%= @trapped_request.http_method %></td>
+  </tr>
+
+  <tr>
+    <th>Remote IP</th>
+    <td><%= @trapped_request.remote_ip %></td>
+  </tr>
+
+  <tr>
+    <th>Request scheme</th>
+    <td><%= @trapped_request.scheme %></td>
+  </tr>
+
+  <tr>
+    <th>Request headers</th>
+    <td class='pretty_hash'><%= raw ap @trapped_request.headers %></td>
+  </tr>
+
+
+</table>
