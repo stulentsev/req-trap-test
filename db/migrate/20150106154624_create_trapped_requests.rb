@@ -8,7 +8,6 @@ class CreateTrappedRequests < ActiveRecord::Migration
       t.string :remote_ip
       t.string :scheme
       t.string :headers
-      t.string :response_body
 
       t.timestamps null: false
     end
