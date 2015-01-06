@@ -3,7 +3,7 @@ class TrappedRequestsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    @trapped_requests = TrappedRequest.for_trap(@trap_id)
+    @trapped_requests = TrappedRequest.for_trap(@trap_id).order(created_at: :desc)
   end
 
   def create
