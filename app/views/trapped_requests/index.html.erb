@@ -1,2 +1,18 @@
-<h1>TrappedRequest#index</h1>
-<p>Find me in app/views/trapped_request/index.html.erb</p>
+<h1>Trapped requests for <%= @trap_id %></h1>
+
+<table>
+  <tr>
+    <th>Remote IP</th>
+    <th>Referrer</th>
+    <th>Created at</th>
+    <th></th>
+  </tr>
+  <% @trapped_requests.each do |trapped_request| %>
+    <tr>
+      <td><%= trapped_request.remote_ip %></td>
+      <td><%= trapped_request.referrer %></td>
+      <td><%= trapped_request.created_at %></td>
+      <td><%= link_to 'View details', show_trapped_request_path(@trap_id, trapped_request) %></td>
+    </tr>
+  <% end %>
+</table>

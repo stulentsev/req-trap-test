@@ -1,3 +1,20 @@
 // Place all the styles related to the TrappedRequest controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-align: center;
+
+  th {
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 5px 10px;
+  }
+
+  td {
+    border: 1px solid black;
+    padding: 3px 10px;
+  }
+}
