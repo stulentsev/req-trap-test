@@ -9,8 +9,10 @@ class TrappingRequestsTest < ActionDispatch::IntegrationTest
   end
 
   test 'create with GET' do
+    assert_equal TrappedRequest.count, 2
     get random_trap_url
     assert_response :success
+    assert_equal TrappedRequest.count, 3
   end
 
   test 'create with POST' do
