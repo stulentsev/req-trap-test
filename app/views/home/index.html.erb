@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h2>The app has four routes:</h2>
+
+<table>
+  <tr>
+    <th> / </th>
+    <td>This page with instructions</td>
+  </tr>
+  <tr>
+    <th> /:trap_id </th>
+    <td>send requests to be captured here </td>
+  </tr>
+  <tr>
+    <th>/:trap_id/requests</th>
+    <td>display requests here</td>
+  </tr>
+  <tr>
+    <th>/:trap_id/requests/:id</th>
+    <td>display a single request here</td>
+  </tr>
+</table>
+
+<p>
+  Any request [POST, PUT, GET, DELETE, ...] made to /:trap_id will be saved in the db and displayed in /:trap_id/requests
+</p>
+
+<h2>Navigate to recorded requests</h2>
+
+<%= form_tag '', method: :get do %>
+  <%= text_field_tag :trap_id, '', placeholder: 'Enter trap id here', id: 'trap_id_input' %>
+  <%= submit_tag :navigate, id: 'navigate_to_trap' %>
+<% end %>
