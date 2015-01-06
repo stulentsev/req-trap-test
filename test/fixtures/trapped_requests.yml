@@ -2,20 +2,18 @@
 
 one:
   trap_id: MyString
-  request_params: MyString
+  params: '{}'
   referrer: MyString
-  request_method: MyString
-  remote_ip: MyString
-  scheme: MyString
-  cookies: MyString
-  headers: MyString
+  http_method: 'GET'
+  remote_ip: '127.0.0.1'
+  scheme: 'http'
+  headers: '{}'
 
 two:
   trap_id: MyString
-  request_params: MyString
+  params: '{}'
   referrer: MyString
-  request_method: MyString
-  remote_ip: MyString
-  scheme: MyString
-  cookies: MyString
-  headers: MyString
+  http_method: 'POST'
+  remote_ip: '8.8.8.8'
+  scheme: 'https'
+  headers: '{}'
