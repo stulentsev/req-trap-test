@@ -15,15 +15,14 @@ ActiveRecord::Schema.define(version: 20150106154624) do
 
   create_table "trapped_requests", force: :cascade do |t|
     t.string   "trap_id"
-    t.string   "request_params"
+    t.string   "params"
     t.string   "referrer"
-    t.string   "request_method"
+    t.string   "http_method"
     t.string   "remote_ip"
     t.string   "scheme"
-    t.string   "cookies"
     t.string   "headers"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
