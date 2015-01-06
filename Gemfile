@@ -15,6 +15,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'pry'
   gem 'byebug'
   gem 'awesome_print'
   gem 'web-console', '~> 2.0'
