@@ -1,28 +1,19 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== Requests Trap
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+A tool for capture and display HTTP requests.
+This simple tool is useful during the development of apps that integrate with external services, such as http clients, webhooks,
+etc. The Requests Trap app ('Req App') provides these services with an endpoint to which they can send requests and notifications.
+For example, let's assume we are developing an ecommerce site named "Shop" with PayPal integration. During development, Shop can
+use Req App to see PayPal requests via a specific endpoint.
+
+== Developer notes
+
+Live update functionality is not implemented due to EventSource HQ being down.
+It can be implemented with any of a number of pub-sub daemons (redis, goliath, something
+in erlang, something in go, etc.) Implementation consists of three simple steps:
+
+1. Run a messaging daemon
+2. Rails app pushes events to it
+3. Client JS subscribes to a specific channel. Upon fetching a new message, add a new row to the table.
+
