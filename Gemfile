@@ -11,6 +11,8 @@ gem 'json'
 
 gem 'jquery-rails'
 
+gem 'puma'
+
 group :production do
   gem 'pg'
 end
